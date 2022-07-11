@@ -15,7 +15,9 @@ app.engine('ejs', engine);
 app.set('views', './views');
 app.set('view engine', 'ejs');app.set('case sensitive routing', true);// 路由區分大小寫
 app.set('trust proxy', true); // 取得發送端IP的設定
-
+app.use(express.urlencoded({
+  extended: true
+}))
 app.use(express.json())
 app.use(requestTimeout);// 設定超時回應
 app.use(morgan('common', { skip: (req, res) => res.statusCode === 204 }));
