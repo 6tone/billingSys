@@ -10,22 +10,38 @@
   </section>
   <div class="album py-5 bg-light">
     <div class="container">
-      <div class="row">
-        <form class="row g-3" method="post" action="/test">
-          <div class="input-group mb-3">
+      
+      <form method="post" action="/test">
+        <div class="row" id="form__group__zone">
+          <div class="input-group mb-3 form__group">
             <select class="form-select" aria-label="Default select example" name="urlStr">
               <option selected>選擇網址</option>
-              <option value="1">One</option>
-              <option value="2">Two</option>
-              <option value="3">Three</option>
+              <option value="https://mail.558bf.net">https://mail.558bf.net</option>
             </select>
-            <input type="text" class="form-control" aria-label="Text input with dropdown button" name="acc">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button" name="acc" placeholder="帳號">
+            <input type="text" class="form-control" aria-label="Text input with dropdown button" name="pw" placeholder="密碼">
+          </div>
+        </div>
+
+        <div class="row text-center">
+          <div class="col"></div>
+          <div class="col">
             <div class="col-auto">
-              <button type="submit" class="btn btn-primary mb-3">Confirm identity</button>
+              <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+                <button type="button" class="btn btn-success"> + </button>
+                <button type="button" class="btn btn-danger"> - </button>
+              </div>
             </div>
           </div>
-        </form>
-      </div>
+          <div class="col"></div>
+        </div>
+        
+        <div class="col-auto">
+          <button type="submit" class="btn btn-primary mb-3">送出</button>
+        </div>
+        
+      </form>
+      
     </div>
   </div>
 </main>
